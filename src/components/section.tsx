@@ -26,27 +26,40 @@ function SectionHeader({ className, ...props }: SectionHeaderProps) {
   );
 }
 
-interface SectionTitleProps extends ComponentProps<"div"> {}
+interface SectionTitleProps extends ComponentProps<"span"> {}
 
 function SectionTitle({ className, ...props }: SectionTitleProps) {
   return (
     <span
-      className={twMerge("bg-navy-700 rounded-lg px-2 py-1.5 flex items-center gap-2 text-xs", className)}
+      className={twMerge(
+        "bg-navy-700 rounded-lg px-3 py-1.5 flex items-center gap-2 text-xs",
+        className,
+      )}
       {...props}
     />
   );
 }
 
-interface SectionIssueCountProps extends ComponentProps<"div"> {}
+interface SectionIssueCountProps extends ComponentProps<"span"> {}
 
 function SectionIssueCount({ className, ...props }: SectionIssueCountProps) {
-  return <span className={twMerge("text-sx text-navy-200", className)} {...props} />;
+  return (
+    <span className={twMerge("text-xs text-navy-200", className)} {...props} />
+  );
 }
 
 interface SectionContentProps extends ComponentProps<"div"> {}
 
 function SectionContent({ className, ...props }: SectionContentProps) {
-  return <div className={twMerge("flex flex-col gap-2.5 overflow-y-scroll", className)} {...props} />;
+  return (
+    <div
+      className={twMerge(
+        "flex flex-col gap-2.5 overflow-y-auto p-3",
+        className,
+      )}
+      {...props}
+    />
+  );
 }
 
 export const Section = {
