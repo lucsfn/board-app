@@ -1,4 +1,4 @@
-import { AuthButton } from "./auth-button";
+import { AuthButton } from "@/components/header/auth-button";
 import { SearchInput } from "./search-input";
 
 export function Header() {
